@@ -61,7 +61,6 @@ Na aba **Services > DNS** do Server0:
 
 1. Ativar o serviço (**On**).
 2. Adicionar um registro do tipo **A Record**:
-   - Nome: `curriculo.local` <!-- confirmar o nome de domínio usado -->
    - Endereço: `192.166.10.3`
 3. Clicar em **Add** para salvar o registro.
 
@@ -96,7 +95,7 @@ Em **Desktop > IP Configuration** de cada máquina:
 Vídeo gravado no modo **Simulation** do Packet Tracer, com o filtro de eventos limitado a
 `ARP`, `DNS` e `ICMP` (Event List Filters). Sequência demonstrada:
 
-1. **DNS** — no Command Prompt de uma das máquinas: `ping curriculo.local`. O primeiro
+1. **DNS** — no Command Prompt de uma das máquinas: ` 192.166.10.3 `. O primeiro
    evento do Event List mostra a consulta ao Server0 e a resposta com o endereço IP.
 2. **ARP** — antes de o primeiro pacote ICMP sair, a máquina de origem resolve o endereço
    MAC do destino; esse par de eventos (`ARP request` / `ARP reply`) aparece logo antes do
@@ -104,11 +103,12 @@ Vídeo gravado no modo **Simulation** do Packet Tracer, com o filtro de eventos 
 3. **ICMP** — a troca de `echo request` / `echo reply` entre origem e destino, confirmando
    que o conteúdo é alcançável depois que nome e endereço MAC já foram resolvidos.
 
+
 ---
 
 ## Aprendizados
 
-- DNS resolve nomes para IP; ARP resolve IP para endereço MAC. São camadas diferentes, e o
+- DNS resolve o IP do serve; ARP resolve IP para endereço MAC. São camadas diferentes, e o
   Event List do Packet Tracer deixa visível a ordem em que cada uma entra em ação antes do
   ICMP sair do lugar.
 - Trocar o módulo de rede de um equipamento desligado reproduz o mesmo cuidado de uma
