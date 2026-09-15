@@ -5,8 +5,6 @@ requisição em uma rede local pequena: resolução de nomes por DNS, resoluçã
 MAC por ARP e entrega de conteúdo por HTTP. O conteúdo publicado é o meu próprio currículo
 (HTML + CSS).
 
-Arquivo do projeto: `Serve_DNS-curriculo.pkt`
-
 ---
 
 ## Topologia
